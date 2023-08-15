@@ -55,11 +55,9 @@ export const Input = () => {
         setValue(event.currentTarget.value)
         filteringFunc(event.currentTarget.value)
     }
-
-    let filter: UsersType[] | undefined
-
+    
     const filteringFunc = (value: string) => {
-        filter = users?.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()))
+        const filter = users?.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()))
         setFiltered(filter)
     }
 
